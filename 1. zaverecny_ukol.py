@@ -25,7 +25,6 @@ for user in users:
     if ((user["name"] == username) and (user["password"] == password)):
         authenticated = True
         break
-print(authenticated, username, password) 
 
 if not authenticated:
     print("unregistered user, terminating the program..")
