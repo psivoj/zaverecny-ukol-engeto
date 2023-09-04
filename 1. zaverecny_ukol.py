@@ -104,10 +104,10 @@ for word in words:
     except:
         pass
 
-print("Title case words are:", title_case_word_count)
-print("Upper case words are:", upper_case_word_count)
-print("Lower case words are:", lower_case_word_count)
-print("There are", numbers_count, "numeric strings.")
+print("There are:", title_case_word_count, "titlecase words in the selected text.")
+print("There are:", upper_case_word_count, "uppercase words in the selected text.")
+print("There are:", lower_case_word_count, "lowercase words in the selected text.")
+print("There are", numbers_count, "numeric strings in the selected text.")
 
 
 
