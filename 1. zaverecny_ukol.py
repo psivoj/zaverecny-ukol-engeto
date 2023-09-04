@@ -77,12 +77,13 @@ if text_number < 1 or text_number > 3:
 text = TEXTS[text_number- 1]
 words = text.split()
 
-number_count = len(words)
-print("Number count is:", number_count)
+total_count = len(words)
+print("There are", total_count, "words in the selected text.")
 
 title_case_word_count = 0
 upper_case_word_count = 0
 lower_case_word_count = 0
+numbers_count = 0
 
 for word in words:
     first_char = word[0]
@@ -96,11 +97,18 @@ for word in words:
     word_lower = word.lower()
     if word == word_lower:
         lower_case_word_count += 1
-
+        
+    try:
+        number = int(word)
+        numbers_count += 1
+    except:
+        pass
 
 print("Title case words are:", title_case_word_count)
 print("Upper case words are:", upper_case_word_count)
 print("Lower case words are:", lower_case_word_count)
+print("There are", numbers_count, "numeric strings.")
+
 
 
 
