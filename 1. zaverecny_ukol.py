@@ -84,6 +84,7 @@ title_case_word_count = 0
 upper_case_word_count = 0
 lower_case_word_count = 0
 numbers_count = 0
+sum_count = 0
 
 for word in words:
     first_char = word[0]
@@ -101,13 +102,22 @@ for word in words:
     try:
         number = int(word)
         numbers_count += 1
+        sum_count += number
     except:
         pass
+
+
 
 print("There are:", title_case_word_count, "titlecase words in the selected text.")
 print("There are:", upper_case_word_count, "uppercase words in the selected text.")
 print("There are:", lower_case_word_count, "lowercase words in the selected text.")
 print("There are", numbers_count, "numeric strings in the selected text.")
+print("The sum of all numbers are:", sum_count, "in the selected text.")
+
+
+
+
+
 
 
 
@@ -118,5 +128,4 @@ print("There are", numbers_count, "numeric strings in the selected text.")
 
 
     
-
 
