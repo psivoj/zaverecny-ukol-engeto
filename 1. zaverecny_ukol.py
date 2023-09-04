@@ -112,7 +112,7 @@ print("There are:", title_case_word_count, "titlecase words in the selected text
 print("There are:", upper_case_word_count, "uppercase words in the selected text.")
 print("There are:", lower_case_word_count, "lowercase words in the selected text.")
 print("There are", numbers_count, "numeric strings in the selected text.")
-print("The sum of all numbers are:", sum_count, "in the selected text.")
+print("The sum of all numbers is", sum_count, "in the selected text.")
 
 
 
