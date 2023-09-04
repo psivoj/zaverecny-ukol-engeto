@@ -82,6 +82,7 @@ print("Number count is:", number_count)
 
 title_case_word_count = 0
 upper_case_word_count = 0
+lower_case_word_count = 0
 
 for word in words:
     first_char = word[0]
@@ -92,8 +93,14 @@ for word in words:
     if word == word_upper:
         upper_case_word_count += 1
 
-print("Title case words are :", title_case_word_count)
-print("Upper case words are: ", upper_case_word_count)
+    word_lower = word.lower()
+    if word == word_lower:
+        lower_case_word_count += 1
+
+
+print("Title case words are:", title_case_word_count)
+print("Upper case words are:", upper_case_word_count)
+print("Lower case words are:", lower_case_word_count)
 
 
 
