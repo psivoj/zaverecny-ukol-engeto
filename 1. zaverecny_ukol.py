@@ -81,7 +81,7 @@ number_count = len(words)
 print("Number count is:", number_count)
 
 title_case_word_count = 0
-upper_case_count = 0
+upper_case_word_count = 0
 
 for word in words:
     first_char = word[0]
@@ -90,10 +90,10 @@ for word in words:
 
     word_upper = word.upper()
     if word == word_upper:
-        upper_case_count += 1
+        upper_case_word_count += 1
 
 print("Title case words are :", title_case_word_count)
-print("Upper case words are: ", upper_case_count)
+print("Upper case words are: ", upper_case_word_count)
 
 
 
