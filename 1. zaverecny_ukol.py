@@ -80,14 +80,25 @@ words = text.split()
 number_count = len(words)
 print("Number count is:", number_count)
 
-upper_case_word_count = 0
+title_case_word_count = 0
+upper_case_count = 0
 
 for word in words:
     first_char = word[0]
     if first_char >= "A" and first_char <= "Z":
-        upper_case_word_count = upper_case_word_count + 1
+        title_case_word_count += 1
 
-print("Words with first upper characters are:", upper_case_word_count)
+    word_upper = word.upper()
+    if word == word_upper:
+        upper_case_count += 1
+
+print("Title case words are :", title_case_word_count)
+print("Upper case words are: ", upper_case_count)
+
+
+
+
+
         
 
 
