@@ -77,8 +77,20 @@ if text_number < 1 or text_number > 3:
 text = TEXTS[text_number- 1]
 words = text.split()
 
-print(words)
 number_count = len(words)
-print(number_count)
+print("Number count is:", number_count)
+
+upper_case_word_count = 0
+
+for word in words:
+    first_char = word[0]
+    if first_char >= "A" and first_char <= "Z":
+        upper_case_word_count = upper_case_word_count + 1
+
+print("Words with first upper characters are:", upper_case_word_count)
+        
+
+
+    
 
 
