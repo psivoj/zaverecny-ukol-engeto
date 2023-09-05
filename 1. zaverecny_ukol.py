@@ -30,7 +30,8 @@ if not authenticated:
     print("unregistered user, terminating the program..")
     quit()
 
-print("Welcome to the app", username)
+print("Welcome to the app,", username, 
+      "We have 3 texts to be analyzed.")
 
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
@@ -60,7 +61,7 @@ in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
 
-enter_text_number = input("enter text number ")
+enter_text_number = input("Enter text number, number must be between 1 and 3 to select: ")
 try:
     text_number = int(enter_text_number)
 except:
