@@ -1,5 +1,5 @@
 """
-projekt_1.py: první projekt do Engeto Online Python Akademie
+1.zaverecny_ukol.py: první projekt do Engeto Online Python Akademie
 
 author: Magdalena Slánská
 email: magdalena@slansti.cz
