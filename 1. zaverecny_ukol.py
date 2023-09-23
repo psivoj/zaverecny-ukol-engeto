@@ -1,13 +1,9 @@
 """
-
 projekt_1.py: první projekt do Engeto Online Python Akademie
 
 author: Magdalena Slánská
-
 email: magdalena@slansti.cz
-
 discord: magdalena2586
-
 """
 
 # seznam credentials (username + password)
@@ -18,7 +14,7 @@ users = [
     {"name": "liz", "password": "pass123"}
 ]
 
-TEXTS = ['''Situated about 10 miles west of Kemmerer,
+texts = ['''Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
 topographic feature that rises sharply
 some 1000 feet above Twin Creek Valley
@@ -44,8 +40,11 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.''']
 
-username = input("enter username:")
-password = input("enter password:")
+texts_count = len(texts)
+
+# User authentication
+username = input("username:")
+password = input("password:")
 
 authenticated = False
 for user in users:
@@ -57,24 +56,26 @@ if not authenticated:
     print("unregistered user, terminating the program..")
     quit()
 
-print("Welcome to the app,", username,
-      "We have 3 texts to be analyzed.")
+# Text selection
+print("----------------------------------------")
+print("Welcome to the app,", username);
+print("We have", texts_count, "texts to be analyzed.")
 
-enter_text_number = input("Enter text number, number must be between 1 and 3 to select: ")
+print("----------------------------------------")
+text_id_input = input("Enter a number btw. 1 and " + str(texts_count) + " to select: ")
+
 try:
-    text_number = int(enter_text_number)
+    text_id = int(text_id_input)
 except:
     print("Input must be integer")
     quit()
 
-if text_number < 1 or text_number > 3:
-    print("enter number 1 to 3")
+if text_id < 1 or text_id > texts_count:
+    print("Entered number must be between 1 and", texts_count)
     quit()
 
-
-
-
-text = TEXTS[text_number- 1]
+# Word count
+text = texts[text_id-1]
 words = text.split()
 
 total_count = len(words)
@@ -84,7 +85,7 @@ title_case_word_count = 0
 upper_case_word_count = 0
 lower_case_word_count = 0
 numbers_count = 0
-sum_count = 0
+number_sum = 0
 
 for word in words:
     first_char = word[0]
@@ -102,30 +103,12 @@ for word in words:
     try:
         number = int(word)
         numbers_count += 1
-        sum_count += number
+        number_sum += number
     except:
         pass
 
-
-
-print("There are:", title_case_word_count, "titlecase words in the selected text.")
-print("There are:", upper_case_word_count, "uppercase words in the selected text.")
-print("There are:", lower_case_word_count, "lowercase words in the selected text.")
-print("There are", numbers_count, "numeric strings in the selected text.")
-print("The sum of all numbers is", sum_count, "in the selected text.")
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-    
-
+print("There are", title_case_word_count, "titlecase words.")
+print("There are", upper_case_word_count, "uppercase words.")
+print("There are", lower_case_word_count, "lowercase words.")
+print("There are", numbers_count, "numeric strings.")
+print("The sum of all the numbers", number_sum)
