@@ -10,9 +10,6 @@ discord: magdalena2586
 
 """
 
-username = input("enter username:")
-password = input("enter password:")
-
 # seznam credentials (username + password)
 users = [
     {"name": "bob", "password": "123"},
@@ -20,21 +17,8 @@ users = [
     {"name": "mike", "password": "password123"},
     {"name": "liz", "password": "pass123"}
 ]
-authenticated = False
-for user in users:
-    if ((user["name"] == username) and (user["password"] == password)):
-        authenticated = True
-        break
 
-if not authenticated:
-    print("unregistered user, terminating the program..")
-    quit()
-
-print("Welcome to the app,", username, 
-      "We have 3 texts to be analyzed.")
-
-TEXTS = ['''
-Situated about 10 miles west of Kemmerer,
+TEXTS = ['''Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
 topographic feature that rises sharply
 some 1000 feet above Twin Creek Valley
@@ -58,8 +42,23 @@ are found in multiple limestone layers, which lie some
 represent several varieties of perch, as well as
 other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
-garpike and stingray are also present.'''
-]
+garpike and stingray are also present.''']
+
+username = input("enter username:")
+password = input("enter password:")
+
+authenticated = False
+for user in users:
+    if ((user["name"] == username) and (user["password"] == password)):
+        authenticated = True
+        break
+
+if not authenticated:
+    print("unregistered user, terminating the program..")
+    quit()
+
+print("Welcome to the app,", username,
+      "We have 3 texts to be analyzed.")
 
 enter_text_number = input("Enter text number, number must be between 1 and 3 to select: ")
 try:
