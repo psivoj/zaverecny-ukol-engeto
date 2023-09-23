@@ -86,8 +86,12 @@ upper_case_word_count = 0
 lower_case_word_count = 0
 numbers_count = 0
 number_sum = 0
+max_length = 0
 
 for word in words:
+    if len(word) > max_length:
+        max_length = len(word)
+
     first_char = word[0]
     if first_char >= "A" and first_char <= "Z":
         title_case_word_count += 1
@@ -112,3 +116,7 @@ print("There are", upper_case_word_count, "uppercase words.")
 print("There are", lower_case_word_count, "lowercase words.")
 print("There are", numbers_count, "numeric strings.")
 print("The sum of all the numbers", number_sum)
+
+length_counts = [0] * max_length
+for word in words:
+    length_counts[len(word) - 1] += 1
