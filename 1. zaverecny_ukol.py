@@ -120,3 +120,12 @@ print("The sum of all the numbers", number_sum)
 length_counts = [0] * max_length
 for word in words:
     length_counts[len(word) - 1] += 1
+
+print("----------------------------------------")
+print(f"LEN|{'OCCURENCES':^{max_length+4}}|NR.")
+for length_id in range(max_length):
+    stars = ""
+    for star_id in range(length_counts[length_id]):
+        stars = stars + "*"
+    print(f"{length_id+1:>3}|{stars:<{max_length+4}}|{length_counts[length_id]}")
+print("----------------------------------------")
