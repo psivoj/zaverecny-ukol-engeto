@@ -41,9 +41,8 @@ hello()
 # construct 4-digit random number not starting 0
 secret = str(random_number())
 
-found = False
 guesses = 0
-while not found:
+while True:
     user_input = input(">>> ")
     try:
         if len(user_input) != 4:
